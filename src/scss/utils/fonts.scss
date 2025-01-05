@@ -1,0 +1,60 @@
+// Geometria
+@font-face {
+	font-family: 'Geometria';
+	src: local('geometria'),
+		url('../fonts/geometria/geometria.woff2') format('woff2'),
+		url('../fonts/manrope/Manrope.woff') format('woff');
+	font-weight: 400;
+	font-style: normal;
+	font-display: swap;
+}
+
+@font-face {
+	font-family: 'Geometria';
+	src: local('geometria bold'), local('geometria-bold'),
+		url('../fonts/geometria/geometria-bold.woff2') format('woff2'),
+		url('../fonts/manrope/Manrope-bold.woff') format('woff');
+	font-weight: bold;
+	font-style: normal;
+	font-display: swap;
+}
+
+@font-face {
+	font-family: 'Geometria';
+	src: local('geometria italic'), local('geometria-italic'),
+		url('../fonts/geometria/geometria-italic.woff2') format('woff2'),
+		url('../fonts/manrope/Manrope-italic.woff') format('woff');
+	font-weight: normal;
+	font-style: italic;
+	font-display: swap;
+}
+
+@font-face {
+	font-family: 'Geometria';
+	src: local('geometria bolditalic'), local('geometria-bolditalic'),
+		url('../fonts/geometria/geometria-bolditalic.woff2') format('woff2'),
+		url('../fonts/manrope/Manrope-bolditalic.woff') format('woff');
+	font-weight: bold;
+	font-style: italic;
+	font-display: swap;
+}
+
+@font-face {
+	font-family: 'Geometria';
+	src: local('geometria medium'), local('geometria-medium'),
+		url('../fonts/geometria/geometria-medium.woff2') format('woff2'),
+		url('../fonts/manrope/Manrope-mediumi.woff') format('woff');
+	font-weight: 500;
+	font-style: normal;
+	font-display: swap;
+}
+
+@font-face {
+	font-family: 'Geometria';
+	src: local('geometria mediumitalic'), local('geometria-mediumitalic'),
+		url('../fonts/geometria/geometria-mediumitalic.woff2') format('woff2'),
+		url('../fonts/manrope/Manrope-mediumitalic.woff') format('woff');
+	font-weight: 500;
+	font-style: italic;
+	font-display: swap;
+}

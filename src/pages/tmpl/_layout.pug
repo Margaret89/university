@@ -1,0 +1,26 @@
+include ../utils/_mixins
+block vars
+
+doctype html
+html(lang="ru")
+	head
+		meta(charset="UTF-8")
+		meta(name="viewport", content="width=device-width, initial-scale=1.0")
+		if pages && pageId && pages[pageId] && pages[pageId].title
+			title #{pages[pageId].title}
+		else
+			title ALMA
+	body
+		.wrapper
+			aside.sidebar
+				block sidebar
+			
+			main.main
+				include ./_header
+
+				if breadcrumbs 
+					+breadcrumbs(breadcrumbs)
+				
+				block body
+			
+		script(src="/main.js" type="module")
