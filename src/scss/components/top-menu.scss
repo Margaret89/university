@@ -1,0 +1,27 @@
+/*-------------- top-menu -----------------*/
+.top-menu{
+	&,
+	&__item{
+		margin: 0;
+		padding: 0;
+		list-style: none;
+	}
+
+	&{
+		display: flex;
+		align-items: center;
+		gap: 30px;
+		padding: 0 40px;
+	}
+
+	&__item::before{display: none;}
+
+	&__link{
+		font-size: 1.6rem;
+		color: #fff;
+		text-decoration: none;
+		transition: color 0.2s ease;
+
+		&:hover{color: var(--color-primary);}
+	}
+}

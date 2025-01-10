@@ -1,0 +1,41 @@
+extends tmpl/_layout
+
+block vars
+	- var pageId = 'main'
+
+block sidebar
+	include ./tmpl/_sidebar-main
+
+block body
+	include ./tmpl/_header
+
+	.main-page
+		.main-page__bg
+			img(src="/upload/bg-main.png", alt="")
+
+		.info-slider-wrap
+			.swiper.info-slider.js-info-slider
+				.swiper-wrapper
+					-
+						var list=[
+							{text:'Новая образовательная программа со скидкой', sale:'30%', img:'people.png'},
+							{text:'Новая образовательная программа со скидкой', sale:'40%', img:'people.png'},
+							{text:'Новая образовательная программа со скидкой', sale:'20%', img:'people.png'},
+							{text:'Новая образовательная программа со скидкой', sale:'10%', img:'people.png'},
+						]
+					each item in list
+						.swiper-slide.info-slider__item
+							.info-slider__content
+								.info-slider__text= item.text
+								.info-slider__sale= item.sale
+
+							.info-slider__img
+								img(src="/upload/"+item.img, alt="")
+
+				.swiper-button-prev.js-info-slider-prev
+					+svg('ic-arrow-left','ic-arrow-left', '11', '21')
+
+				.swiper-button-next.js-info-slider-next
+					+svg('ic-arrow-right','ic-arrow-right', '11', '21')
+
+			.swiper-pagination.js-info-slider-pagination

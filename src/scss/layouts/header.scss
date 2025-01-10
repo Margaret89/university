@@ -1,0 +1,28 @@
+.header{
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	border-bottom: 1px solid rgba(255,255,255,0.2);
+	position: relative;
+	z-index: 10;
+
+	&__actions{
+		display: flex;
+		margin-left: auto;
+	}
+
+	&__search{
+		display: inline-flex;
+		align-items: center;
+		justify-content: center;
+		flex-shrink: 0;
+		width: 104px;
+		height: 104px;
+		border-left: 1px solid rgba(255,255,255,0.2);
+		transition: color 0.2s ease;
+
+		.icon{color: rgba(255,255,255,0.5);}
+
+		&:hover .icon{color: #fff;}
+	}
+}

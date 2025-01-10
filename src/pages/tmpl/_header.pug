@@ -1,1 +1,19 @@
-header.header header
+header.header
+	ul.top-menu
+		-
+			var list=[
+				{text:'Об академии'},
+				{text:'Каталог программ'},
+				{text:'Новости'},
+				{text:'Документы'},
+			]
+		each item in list
+			li.top-menu__item
+				a(href="#").top-menu__link= item.text
+
+	.header__actions
+		.header__search
+			+svg('ic-search','ic-search', '40', '40')
+
+		.ic-hamburger
+			span

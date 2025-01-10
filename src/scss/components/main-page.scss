@@ -1,0 +1,34 @@
+/*-------------- main-page -----------------*/
+.main-page{
+	display: flex;
+	align-items: flex-end;
+	padding: 134px 30px 30px;
+	margin-top: -104px;
+	height: 100%;
+	position: relative;
+
+	&__bg{
+		width: 100%;
+		height: 100%;
+		position: absolute;
+		top: 0;
+		left: 0;
+
+		&::before{
+			content: '';
+			display: block;
+			width: 100%;
+			height: 170px;
+			background: linear-gradient(to bottom, rgba(38,38,38,0.8) 0%, rgba(38,38,38,0) 100%);
+			position: absolute;
+			top: 0;
+			left: 0;
+		}
+
+		img{
+			width: 100%;
+			height: 100%;
+			object-fit: cover;
+		}
+	}
+}

@@ -4,10 +4,11 @@ block vars
 	- var pageId = 'main'
 
 block sidebar
-	|sidebar
+	include ./tmpl/_sidebar-main
 
 block body
-	section Список всех страниц
+	section
+		h2 Список всех страниц
 		if pages
 			ul
 				each page in pages
