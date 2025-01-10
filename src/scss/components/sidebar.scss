@@ -177,6 +177,8 @@
 		opacity: 0.3;
 		transition: opacity 0.2s ease;
 
+		.icon{color: #000;}
+
 		&:hover{opacity: 1;}
 	}
 }

@@ -53,9 +53,6 @@
 	
 	&.active{
 		span{
-			width: calc(100% - 8px);
-			left: 4px;
-
 			&::before,
 			&::after{
 				width: 100%;
@@ -63,7 +60,6 @@
 		}
 	}
 
-	
 	&.active span::before {transition: top 0.3s ease 0s, transform 0.3s ease 0.3s;}
 	&.active span::after {transition: bottom 0.3s ease 0s, transform 0.3s ease 0.3s;}
 }

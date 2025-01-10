@@ -25,4 +25,81 @@
 
 		&:hover .icon{color: #fff;}
 	}
+
+	.ic-hamburger{z-index: 110;}
+}
+
+.header-popup{
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	width: 0;
+	height: 0;
+	background: #fff;
+	position: fixed;
+	top: 0;
+	right: 0;
+	z-index: 100;
+	transform-origin: 100% 0;
+	transform: scale(0);
+	opacity: 0;
+	transition: all 0.3s ease;
+
+	&.open{
+		width: 100%;
+		height: 100vh;
+		opacity: 1;
+		transform: scale(1);
+	}
+
+	&__content{
+		display: flex;
+		flex-direction: column;
+		justify-content: space-between;
+		gap: 30px;
+		height: 100%;
+		padding-top: 33px;
+		overflow-y: auto;
+	}
+
+	&__top{
+		padding: 0 164px 0 60px;
+		border-bottom: 1px solid rgba(132, 159, 201, 0.2);
+	}
+
+	.form-search{
+		border-top: 0;
+		border-bottom: 0;
+	}
+
+	&__main{
+		display: flex;
+		gap: 70px;
+		padding: 0 104px 0 60px;
+	}
+
+	&__bottom{
+		margin-top: auto;
+		padding: 30px 60px;
+	}
+
+	&__address{
+		max-width: 225px;
+		font-size: 1.2rem;
+		line-height: 1.258;
+	}
+
+	&__footer{
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+		gap: 30px;
+		max-width: 500px;
+		margin-top: 5px;
+	}
+
+	&__copyright{
+		font-size: 1rem;
+		color: rgba(0,0,0,0.5);
+	}
 }

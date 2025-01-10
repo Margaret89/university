@@ -10,14 +10,14 @@ if(document.querySelector('.js-info-slider')){
 	var штащSlider = new Swiper('.js-info-slider', {
 		modules: [Navigation, Pagination],
 		loop:true,
-        pagination:{
-            el:".js-info-slider-pagination",
-            clickable:true
-        },
-        navigation: {
-            nextEl: '.js-info-slider-next',
-            prevEl: '.js-info-slider-prev',
-        },
+		pagination:{
+			el:".js-info-slider-pagination",
+			clickable:true
+		},
+		navigation: {
+			nextEl: '.js-info-slider-next',
+			prevEl: '.js-info-slider-prev',
+		},
 		// breakpoints: {
 		// 	1600: {
 		// 		slidesPerView: 10,
@@ -31,3 +31,9 @@ if(document.querySelector('.js-info-slider')){
 		// }
 	});
 }
+
+//Открыть/Закрыть попап с меню
+document.querySelector('.js-switch-header-popup').addEventListener('click', function(elem){
+	this.classList.toggle('active');
+	document.querySelector('.js-header-popup').classList.toggle('open');
+});

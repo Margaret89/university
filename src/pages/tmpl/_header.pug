@@ -15,5 +15,95 @@ header.header
 		.header__search
 			+svg('ic-search','ic-search', '40', '40')
 
-		.ic-hamburger
+		.ic-hamburger.js-switch-header-popup
 			span
+
+	.header-popup.js-header-popup
+		.header-popup__top
+			form.form-search
+				input(type="text", placeholder="Введите название программы для поиска...")
+				button(type="submit").form-search__btn
+					+svg('ic-search','ic-search', '40', '40')
+
+		.header-popup__content
+			.header-popup__main
+				.main-menu.main-menu_wide
+					.main-menu__title-wrap
+						.main-menu__title Популярные программы
+
+						a(href="#").main-menu__more Все программы
+
+					ul.main-menu-sub
+						-
+							var list=[
+								{text:'Здравоохранение'},
+								{text:'Физическая культура и спорт'},
+								{text:'Культура и искусство'},
+								{text:'Педагогическое образование'},
+								{text:'Общепит'},
+								{text:'Промышленная безопасность'},
+								{text:'Экономика'},
+							]
+						each item in list
+							li.main-menu-sub__item
+								a(href="#").main-menu-sub__link
+									span.main-menu-sub__icon
+										+svg('ic-heart','ic-heart', '34', '29')
+
+									span.main-menu-sub__text= item.text
+
+									span.main-menu-sub__arr
+										+svg('ic-arr-right','ic-arr-right', '26', '9')
+				
+				.main-menu
+					.main-menu__title-wrap
+						.main-menu__title Документы
+
+					ul.main-menu-sub
+						-
+							var list=[
+								{text:'Аккредитация'},
+								{text:'Работа с юр. лицами и организациями'},
+								{text:'Методические материалы'},
+								{text:'Сведения об образовательной организации'},
+							]
+						each item in list
+							li.main-menu-sub__item
+								a(href="#").main-menu-sub__link
+									span.main-menu-sub__text= item.text
+
+				.main-menu
+					.main-menu__title-wrap
+						.main-menu__title Об академии
+
+					ul.main-menu-sub
+						-
+							var list=[
+								{text:'Новости и события'},
+								{text:'Отзывы'},
+								{text:'Оплата'},
+								{text:'Контакты'},
+							]
+						each item in list
+							li.main-menu-sub__item
+								a(href="#").main-menu-sub__link
+									span.main-menu-sub__text= item.text
+
+			.header-popup__bottom
+				.header-popup__address 344068, Россия, г.&nbsp;Ростов-на-Дону, пр.&nbsp;М.&nbsp;Нагибина, 33А/47
+
+				.header-popup__footer
+					.header-popup__copyright Copyright © 2024 ЮЖНЫЙ УНИВЕРСИТЕТ (ИУБиП)
+					
+					.social
+						a(href="#", target="_blank").social__item
+							+svg('ic-youtube','ic-youtube', '22', '15')
+
+						a(href="#", target="_blank").social__item
+							+svg('ic-telegram','ic-telegram', '20', '17')
+
+						a(href="#", target="_blank").social__item
+							+svg('ic-vk','ic-vk', '20', '20')
+
+						a(href="#", target="_blank").social__item
+							+svg('ic-ok','ic-ok', '20', '20')
