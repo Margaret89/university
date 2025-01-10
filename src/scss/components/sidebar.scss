@@ -3,7 +3,6 @@
 	display: flex;
 	flex-direction: column;
 	flex-shrink: 0;
-	// width: 388px;
 	width: 618px;
 	height: 100vh;
 	background: var(--color-primary);
@@ -91,6 +90,66 @@
 		&__item{
 			.icon{color: #fff;}
 		}
+	}
+
+	&_thin{width: 388px;}
+	&_thin &__top{padding-left: 28px;}
+
+	&_thin .sidebar-info{
+		flex-direction: column;
+		gap: 24px;
+		text-align: center;
+	}
+
+	&_thin &__label{
+		max-width: 245px;
+		font-size: 1.4rem;
+		text-align: center;
+		margin-left: auto;
+		margin-right: auto;
+		margin-bottom: 8px;
+	}
+
+	&_thin &__title{
+		font-size: 3rem;
+		text-align: center;
+	}
+
+	&_thin &__name{margin-top: 0;}
+	&_thin &__bottom{margin-top: auto;}
+
+	&_thin &__content{
+		gap: 24px;
+		padding: 24px 28px 32px;
+	}
+
+	&_thin &__btn{margin-top: 34px;}
+	&_thin &__btn .btn{padding: 0 35px;}
+	&_thin &__btn .btn .icon{display: none;}
+
+	&_thin &__footer{
+		flex-direction: column-reverse;
+		gap: 18px;
+		margin-top: 20px;
+	}
+
+	&_thin &__address{
+		margin-left: auto;
+		margin-right: auto;
+		text-align: center;
+	}
+
+	&_thin .partners{
+		gap: 12px;
+		margin-top: 32px;
+	}
+
+	&_thin .partners__item{gap: 7px;}
+	&_thin .partners__img{max-width: 40px;}
+
+	&_thin .partners__label{
+		max-width: 80px;
+		font-size: 0.7rem;
 	}
 }
 

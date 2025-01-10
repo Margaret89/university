@@ -189,6 +189,7 @@ button.btn{
 	&_border-white{
 		background: transparent;
 		border-color: #fff;
+		font-weight: normal;
 		color: #fff;
 
 		.icon{color: #fff;}
@@ -267,6 +268,8 @@ button.btn{
 
 .pt-indent{padding-top: var(--margin-indent);}
 .pb-indent{padding-bottom: var(--margin-indent);}
+
+.page-content{padding: 20px 40px;}
 
 .code{
 	background-color: #f7f7f7;

@@ -4,6 +4,10 @@
 			"href": "main.html",
 			"title":"Главная"
 		},
+		"catalog":{
+			"href": "catalog.html",
+			"title":"Каталог всех программ"
+		},
 		"tipografika":{
 			"href": "tipografika.html",
 			"title":"Типографика",

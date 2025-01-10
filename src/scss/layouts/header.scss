@@ -27,6 +27,19 @@
 	}
 
 	.ic-hamburger{z-index: 110;}
+
+	&_position{
+		position: absolute;
+		top: 0;
+		right: 0;
+	}
+
+	&_position .header-popup{
+		.form-search input[type="text"],
+		.form-search input[type="search"]{
+			height: 80px;
+		}
+	}
 }
 
 .header-popup{

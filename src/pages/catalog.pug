@@ -1,0 +1,136 @@
+extends tmpl/_layout
+
+block vars
+	- var pageId = 'catalog'
+	-
+		var breadcrumbs=[
+			{href:'/',name:'Главная'},
+			{href:'#',name:'Каталог'},
+		];
+
+block sidebar
+	aside.sidebar.sidebar_thin
+		.sidebar__top
+			.sidebar__top-link
+				a(href="#") Сведения об образовательной организации
+
+			a(href="#").visually
+				.visually__icon
+					+svg('ic-eye','ic-eye', '22', '14')
+
+		.sidebar__content
+			.sidebar-info
+				.sidebar-info__logo
+					img(src="/upload/logo.svg", alt="")
+
+			.sidebar__main
+				.sidebar__name
+					.sidebar__label Академия Профессионального Образования
+					.sidebar__title Южный университет
+
+				.sidebar__btn
+					a.btn.btn_red.btn_big(href='#') Оставить заявку
+					a.btn.btn_border-white.btn_big(href='#') Перейти в каталог программ
+						+svg('ic-arr-right','ic-arr-right', '26', '9')
+
+			.sidebar__bottom
+				.sidebar-info
+					.sidebar-info__content
+						.sidebar-info__label Горячая линия (звонок бесплатный)
+
+						.sidebar-info__phone
+							a(href="tel:+78002226806") 8 800 222-68-06
+							
+				.partners
+					.partners__item
+						.partners__img
+							img(src="/upload/partner1.png", alt="")
+
+						.partners__label МИНИСТЕРСТВО НАУКИ И ВЫСШЕГО ОБРАЗОВАНИЯ РФ
+
+					.partners__item
+						.partners__img
+							img(src="/upload/partner2.png", alt="")
+
+						.partners__label
+							|НМО
+							br
+							|МИНЗДРАВА
+							br
+							|РОССИИ
+
+					.partners__item
+						.partners__img
+							img(src="/upload/partner3.png", alt="")
+
+						.partners__label
+							|МИНТРУД
+							br
+							|РОССИИ
+
+				.sidebar__address 344068, Россия, г. Ростов-на-Дону, пр. М. Нагибина, 33А/47
+
+				.sidebar__footer
+					.sidebar__copyright Copyright © 2024 ЮЖНЫЙ УНИВЕРСИТЕТ (ИУБиП)
+					
+					.social
+						a(href="#", target="_blank").social__item
+							+svg('ic-youtube','ic-youtube', '22', '15')
+
+						a(href="#", target="_blank").social__item
+							+svg('ic-telegram','ic-telegram', '20', '17')
+
+						a(href="#", target="_blank").social__item
+							+svg('ic-vk','ic-vk', '20', '20')
+
+						a(href="#", target="_blank").social__item
+							+svg('ic-ok','ic-ok', '20', '20')
+
+block body
+	include ./tmpl/_header-short
+
+	.page-content
+		.page-title
+			h1 Каталог всех программ
+
+		form.search-page
+			input(type="text", placeholder="Введите название программы для быстрого поиска...")
+			button(type="submit").search-page__btn
+				+svg('ic-search','ic-search', '20', '20')
+
+		.programs-list
+			-
+				var list=[
+					{icon:'true', tag:'Новинка', title:'Здравоохранение', info:'840 программ'},
+					{icon:'true', title:'Физическая культура и спорт', info:'840 программ'},
+					{icon:'true', title:'Культура и искусство', info:'840 программ'},
+					{icon:'true', title:'Педагогическое образование', info:'840 программ'},
+					{icon:'true', title:'Общепит', info:'840 программ'},
+					{icon:'true', title:'Промышленная безопасность', info:'840 программ'},
+					{icon:'true', tag:'Новинка', title:'Экономика', info:'840 программ'},
+					{icon:'true', title:'Педагогическое образование', info:'840 программ'},
+					{icon:'true', tag:'Много скидок', tag_color:'pink', title:'Педагогическое образование', info:'840 программ'},
+					{disable:'true', label:'Скоро появится', title:'Новая программа'},
+					{disable:'true', label:'Скоро появится', title:'Новая программа'},
+					{disable:'true', label:'Скоро появится', title:'Новая программа'},
+				]
+			each item in list
+				if(item.disable)
+					.program-item.program-item_disable
+						.program-item__label= item.label
+							
+						.program-item__content
+							.program-item__title= item.title
+				else
+					a(href="#").program-item
+						.program-item__top
+							.program-item__icon
+								+svg('ic-heart','ic-heart', '34', '29')
+
+							if(item.tag)
+								.program-item__tag(class=item.tag_color?'program-item__tag_'+item.tag_color:'')= item.tag
+
+						.program-item__content
+							.program-item__title= item.title
+							.program-item__info= item.info
+					

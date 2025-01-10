@@ -62,4 +62,25 @@
 
 	&.active span::before {transition: top 0.3s ease 0s, transform 0.3s ease 0.3s;}
 	&.active span::after {transition: bottom 0.3s ease 0s, transform 0.3s ease 0.3s;}
+
+	&_small{
+		width: 80px;
+		height: 80px;
+
+		span,
+		span::before,
+		span::after{
+			height: 4px;
+		}
+
+		span{
+			width: calc(100% - 40px);
+			left: 20px;
+			top: 38px;
+
+		}
+
+		span::before {top: -12px;}
+		span::after {bottom: -12px;}
+	}
 }
