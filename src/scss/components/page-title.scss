@@ -1,0 +1,15 @@
+/*-------------- page-title -----------------*/
+.page-title{
+	display: flex;
+	align-items: flex-end;
+	gap: 20px;
+	margin-bottom: 3rem;
+
+	h1, .h1{margin-bottom: 0;}
+
+	&__count{
+		font-size: 1.2rem;
+		color: rgba(10, 64, 147, 0.5);
+		margin-bottom: 5px;
+	}
+}

@@ -61,4 +61,6 @@
 			.icon{color: var(--color-primary);}
 		}
 	}
+
+	& + .catalog-wrap{margin-top: -10px;}
 }

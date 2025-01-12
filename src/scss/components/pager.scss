@@ -1,0 +1,22 @@
+/*-------------- pager -----------*/
+.pager{
+	display: flex;
+	flex-wrap: wrap;
+	align-items: center;
+	justify-content: center;
+	gap: 25px;
+	margin-top: 40px;
+
+	&__item{
+		font-size: 1.6rem;
+		font-weight: 500;
+		color: #000;
+		text-decoration: none;
+		transition: color 0.2s ease;
+	}
+
+	&__item:hover,
+	&__item.active{
+		color: rgba(10, 64, 147, 0.5);
+	}
+}

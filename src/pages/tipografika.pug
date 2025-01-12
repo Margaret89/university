@@ -12,7 +12,7 @@ block sidebar
 	include ./tmpl/_sidebar-main
 
 block body
-	section.st-width
+	section.page-content
 		p
 			a(href='#') Это стандартная ссылка
 
@@ -61,14 +61,29 @@ block body
 		a.btn.btn_red(href='#') Кнопка
 		br
 		br
+		a.btn.btn_middle(href='#') Кнопка
+		br
+		br
 		a.btn.btn_big(href='#') Кнопка
+		br
+		br
+		a.btn.btn_square(href='#') Кнопка
 
 		br
 		br
 		div(style="background: #0A4093; padding: 20px")
 			a.btn.btn_border-white(href='#') Кнопка
 
-		
+		br
+		br
+		br
+		.h2 Нестандартный checkbox
+		label.input-check
+			input(type='checkbox')
+			span.input-check__mark
+				+svg('ic-check','ic-check', '10', '7')
+			span.input-check__text Текст
+
 
 		br
 		br
@@ -123,3 +138,13 @@ block body
 				.type-icon__img
 					+svg('ic-heart','ic-heart', '34', '29')
 				.type-icon__name ic-heart
+
+			.type-icon__item
+				.type-icon__img
+					+svg('ic-filter','ic-filter', '14', '14')
+				.type-icon__name ic-filter
+
+			.type-icon__item
+				.type-icon__img
+					+svg('ic-check','ic-check', '10', '7')
+				.type-icon__name ic-check

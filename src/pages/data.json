@@ -8,6 +8,10 @@
 			"href": "catalog.html",
 			"title":"Каталог всех программ"
 		},
+		"catalog-list":{
+			"href": "catalog-list.html",
+			"title":"Каталог список"
+		},
 		"tipografika":{
 			"href": "tipografika.html",
 			"title":"Типографика",

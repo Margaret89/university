@@ -212,6 +212,14 @@ button.btn{
 		}
 	}
 
+	&_middle{
+		height: 6rem;
+		border-radius: 3.2rem;
+		padding: 0 35px;
+		font-size: 1.6rem;
+		font-weight: normal;
+	}
+
 	&_big{
 		height: 6.3rem;
 		border-radius: 3.2rem;
@@ -230,6 +238,8 @@ button.btn{
 		background-position: right center;
 		box-shadow: none;
 	}
+
+	&_square{border-radius: 10px;}
 
 	&:hover .ic-arr-right{transform: translateX(10px);}
 
