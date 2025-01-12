@@ -46,3 +46,28 @@
 		margin-top: 10px;
 	}
 }
+
+@media (max-width: 767px) {
+	.info-block{
+		justify-content: flex-start;
+		min-height: 212px;
+		text-align: left;
+		background: linear-gradient(to right, rgba(19,166,240,1) 0%, rgba(28,91,208,1) 100%);
+
+		&::before{
+			content: '';
+			width: 203px;
+			height: 208px;
+			background: url(../img/bg-people.png) no-repeat right bottom;
+			background-size: contain;
+			position: absolute;
+			bottom: 0;
+			right: 0;
+		}
+
+		&__content{
+			padding: 44px 34px;
+			position: relative;
+		}
+	}
+}

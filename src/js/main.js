@@ -151,6 +151,25 @@ document.querySelectorAll('.js-main-menu').forEach((accSection) => {
 	}
 });
 
+// Открыть/Закрыть фильтр
+document.querySelectorAll('.js-filter').forEach((accSection) => {
+	if(screenWidth < 1280){
+		const accHeader = accSection.querySelector('.js-filter-top');
+		const accBody = accSection.querySelector('.js-filter-content-wrap');
+		const accContent = accSection.querySelector('.js-filter-content');
+		
+		accHeader.addEventListener('click', () => {
+			accSection.classList.toggle("opened");
+			
+			if ( accSection.classList.contains("opened") ) {
+				accBody.style.maxHeight = `${accContent.clientHeight}px`;
+			} else {
+				accBody.style.maxHeight = "0px";
+			}
+		})
+	}
+});
+
 // Валидация форм
 
 //Функция добавления ошибки

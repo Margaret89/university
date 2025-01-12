@@ -151,9 +151,15 @@ block body
 					a.pager__item(href='#') ...
 					a.pager__item(href='#') 116
 
+				.info-block
+					.info-block__content
+						.info-block__title Новая
+						.info-block__text образовательная программа со скидкой
+						.info-block__sale -30%
+
 			.catalog-wrap__sidebar
-				.filter
-					.filter__top
+				.filter.js-filter
+					.filter__top.js-filter-top
 						.filter__header-wrap
 							.filter__icon
 								+svg('ic-filter','ic-filter', '14', '14')
@@ -161,72 +167,77 @@ block body
 							.filter__header Фильтры
 
 						a(href="#").filter__clear Очистить
+						.filter__arr
+							+svg('ic-arrow-down','ic-arrow-down', '12', '8')
 
-					.filter__item
-						.filter__title Деятельность
+					.filter__content-wrap.js-filter-content-wrap
+						.filter__content.js-filter-content
+							.filter__item
+								.filter__title Деятельность
 
-						.filter__content
-							-
-								var list=[
-									{text:'Высший персонал'},
-									{text:'Средний персонал'},
-									{text:'Младший персонал'},
-									{text:'Немедецинские специальности'},
-								]
-							each item in list
-								label.input-check
-									input(type='checkbox')
-									span.input-check__mark
-										+svg('ic-check','ic-check', '10', '7')
-									span.input-check__text= item.text
+								.filter__content
+									-
+										var list=[
+											{text:'Высший персонал'},
+											{text:'Средний персонал'},
+											{text:'Младший персонал'},
+											{text:'Немедецинские специальности'},
+										]
+									each item in list
+										label.input-check
+											input(type='checkbox')
+											span.input-check__mark
+												+svg('ic-check','ic-check', '10', '7')
+											span.input-check__text= item.text
 
-					.filter__item
-						.filter__title Профессия
+							.filter__item
+								.filter__title Профессия
 
-						.filter__content
-							-
-								var list=[
-									{text:'Врач УЗИ'},
-								]
-							each item in list
-								label.input-check
-									input(type='checkbox')
-									span.input-check__mark
-										+svg('ic-check','ic-check', '10', '7')
-									span.input-check__text= item.text
+								.filter__content
+									-
+										var list=[
+											{text:'Врач УЗИ'},
+										]
+									each item in list
+										label.input-check
+											input(type='checkbox')
+											span.input-check__mark
+												+svg('ic-check','ic-check', '10', '7')
+											span.input-check__text= item.text
 
-					.filter__item
-						.filter__title Тип обучения
+							.filter__item
+								.filter__title Тип обучения
 
-						.filter__content
-							-
-								var list=[
-									{text:'Профессиональная переподготовка'},
-									{text:'Повышение квалификации'},
-									{text:'НМО'},
-									{text:'Категория медработника'},
-									{text:'Аккредитация'},
-								]
-							each item in list
-								label.input-check
-									input(type='checkbox')
-									span.input-check__mark
-										+svg('ic-check','ic-check', '10', '7')
-									span.input-check__text= item.text
+								.filter__content
+									-
+										var list=[
+											{text:'Профессиональная переподготовка'},
+											{text:'Повышение квалификации'},
+											{text:'НМО'},
+											{text:'Категория медработника'},
+											{text:'Аккредитация'},
+										]
+									each item in list
+										label.input-check
+											input(type='checkbox')
+											span.input-check__mark
+												+svg('ic-check','ic-check', '10', '7')
+											span.input-check__text= item.text
 
-					.filter__item
-						.filter__title Специальность
+							.filter__item
+								.filter__title Специальность
 
-						.filter__content
-							select.js-select
-								option(disabled='' selected='') Выберите специальность
-								option(value='Значение 1') Значение 1
-								option(value='Значение 2') Значение 2
-								option(value='Значение 3') Значение 3
-								option(value='Значение 4') Значение 4
-									
-					.filter__btn
-						a(href="#").btn.btn_square.btn_middle Применить фильтр
+								.filter__content
+									select.js-select
+										option(disabled='' selected='') Выберите специальность
+										option(value='Значение 1') Значение 1
+										option(value='Значение 2') Значение 2
+										option(value='Значение 3') Значение 3
+										option(value='Значение 4') Значение 4
+											
+							.filter__btn
+								a(href="#").btn.btn_square.btn_middle Применить фильтр
+								a.btn.btn_border.btn_middle.btn_square Очистить
 
 				.info-block
 					.info-block__content
