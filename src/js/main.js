@@ -26,22 +26,26 @@ Fancybox.bind("[data-fancybox]", {
 	}
 });
 
+//Choices
+import  Choices from 'choices.js/public/assets/scripts/choices.js';
+import 'choices.js/public/assets/styles/choices.min.css';
+
 document.addEventListener("DOMContentLoaded", function(){
 	// Маска для телефона
 	if(document.querySelector('.js-phone')){
 		Inputmask('+7 (999) 999-9999').mask('.js-phone');
 	}
 
-	// //Кастомный селект
-	// if(document.querySelector('.js-select')){
-	// 	document.querySelectorAll(".js-select").forEach(function(select){
-	// 		const choices = new Choices(select, {
-	// 			searchEnabled: false,
-	// 			removeItemButton: false,
-	// 			shouldSort: false,
-	// 		});
-	// 	});
-	// }
+	//Кастомный селект
+	if(document.querySelector('.js-select')){
+		document.querySelectorAll(".js-select").forEach(function(select){
+			const choices = new Choices(select, {
+				searchEnabled: false,
+				removeItemButton: false,
+				shouldSort: false,
+			});
+		});
+	}
 });
 
 
