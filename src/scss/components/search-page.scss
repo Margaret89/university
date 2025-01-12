@@ -64,3 +64,20 @@
 
 	& + .catalog-wrap{margin-top: -10px;}
 }
+
+@media (max-width: 767px) {
+	.search-page{
+		margin-bottom: 20px;
+		
+		input[type="text"],
+		input[type="search"]{
+			font-size: 1.4rem;
+			padding: 0 40px 0 20px;
+		}
+
+		&__btn{
+			left: auto;
+			right: 0;
+		}
+	}
+}

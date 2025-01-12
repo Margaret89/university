@@ -98,7 +98,7 @@ ul{
 
 .wrapper{
 	display: flex;
-	height: 100vh;
+	min-height: 100vh;
 	width: 100%;
 	overflow: hidden;
 }
@@ -338,4 +338,10 @@ button.btn{
 			font-size: 1.4rem;
 		}
 	}
+}
+
+@media (max-width: 767px) {
+	.page-content{padding: 22px 20px;}
+
+	h1, .h1{font-size: 1.8rem;}
 }

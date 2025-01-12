@@ -153,6 +153,10 @@
 		max-width: 80px;
 		font-size: 0.7rem;
 	}
+
+	&_thin &__main .sidebar-info{display: none;}
+	&_thin &__bottom > .social{display: none;}
+	&_thin .map{display: none;}
 }
 
 .visually{
@@ -370,6 +374,76 @@
 		}
 
 		&__copyright{font-size: 0.8rem;}
+
+		&_thin .sidebar-info{display: flex;}
+
+		&_thin &__label{
+			max-width: none;
+			font-size: 1.2rem;
+			margin-bottom: 5px;
+		}
+
+		&_thin &__main{margin-top: -20px;}
+		&_thin &__title{font-size: 1.8rem;}
+
+		&_thin &__name{
+			padding-bottom: 20px;
+			margin-bottom: 20px;
+			position: relative;
+
+			&::after{
+				content: '';
+				display: inline-block;
+				width: 100px;
+				height: 1px;
+				background: rgba(255,255,255,0.2);
+				position: absolute;
+				bottom: 0;
+				left: 0;
+				right: 0;
+				margin: 0 auto;
+			}
+		}
+
+		&_thin &__main .sidebar-info{display: block;}
+		&_thin &__main .sidebar-info__label{font-size: 1.2rem;}
+		&_thin &__main .sidebar-info__phone{font-size: 1.8rem;}
+		&_thin &__btn{margin-top: 24px;}
+		&_thin &__btn .btn_border-white{display: none;}
+		&_thin &__bottom .sidebar-info{display: none;}
+
+		&_thin &__bottom > .social{
+			display: flex;
+			justify-content: center;
+
+			.ic-youtube{
+				width: 34px;
+				height: 22px;
+			}
+
+			.ic-telegram{
+				width: 30px;
+				height: 25px;
+			}
+
+			.ic-vk{
+				width: 30px;
+				height: 30px;
+			}
+
+			.ic-ok{
+				width: 30px;
+				height: 30px;
+			}
+		}
+
+		&_thin .map{
+			display: block;
+			margin-top: 30px;
+		}
+
+		&_thin .map iframe{height: 318px;}
+		&_thin &__address{display: none;}
 	}
 
 	.partners{

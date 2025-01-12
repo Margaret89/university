@@ -73,3 +73,36 @@
 		opacity: 0.5;
 	}
 }
+
+@media (max-width: 1439px) {
+	.program-item{
+		width: calc(33.33% - 13.33px);
+	}
+}
+
+@media (max-width: 1279px) {
+	.program-item{
+		width: calc(50% - 10px);
+	}
+}
+
+@media (max-width: 767px) {
+	.programs-list{gap: 10px;}
+
+	.program-item{
+		width: calc(50% - 5px);
+		min-height: 152px;
+		padding: 20px 24px;
+
+		&__top{gap: 10px;}
+
+		&__tag{font-size: 1rem;}
+		&__title{font-size: 1.4rem;}
+		&__label{font-size: 1.2rem;}
+
+		&__info{
+			font-size: 1.2rem;
+			margin-top: 10px;
+		}
+	}
+}
