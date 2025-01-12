@@ -1,4 +1,7 @@
 header.header
+	.header__info
+		a(href="#") Сведения об образовательной организации
+
 	ul.top-menu
 		-
 			var list=[
@@ -33,67 +36,100 @@ header.header
 
 						a(href="#").main-menu__more Все программы
 
-					ul.main-menu-sub
-						-
-							var list=[
-								{text:'Здравоохранение'},
-								{text:'Физическая культура и спорт'},
-								{text:'Культура и искусство'},
-								{text:'Педагогическое образование'},
-								{text:'Общепит'},
-								{text:'Промышленная безопасность'},
-								{text:'Экономика'},
-							]
-						each item in list
-							li.main-menu-sub__item
-								a(href="#").main-menu-sub__link
-									span.main-menu-sub__icon
-										+svg('ic-heart','ic-heart', '34', '29')
+					.main-menu__content
+						ul.main-menu-sub
+							-
+								var list=[
+									{text:'Здравоохранение'},
+									{text:'Физическая культура и спорт'},
+									{text:'Культура и искусство'},
+									{text:'Педагогическое образование'},
+									{text:'Общепит'},
+									{text:'Промышленная безопасность'},
+									{text:'Экономика'},
+								]
+							each item in list
+								li.main-menu-sub__item
+									a(href="#").main-menu-sub__link
+										span.main-menu-sub__icon
+											+svg('ic-heart','ic-heart', '34', '29')
 
-									span.main-menu-sub__text= item.text
+										span.main-menu-sub__text= item.text
 
-									span.main-menu-sub__arr
-										+svg('ic-arr-right','ic-arr-right', '26', '9')
+										span.main-menu-sub__arr
+											+svg('ic-arr-right','ic-arr-right', '26', '9')
 				
-				.main-menu
-					.main-menu__title-wrap
+				.main-menu.js-main-menu
+					.main-menu__title-wrap.js-main-menu-title-wrap
 						.main-menu__title Документы
 
-					ul.main-menu-sub
-						-
-							var list=[
-								{text:'Аккредитация'},
-								{text:'Работа с юр. лицами и организациями'},
-								{text:'Методические материалы'},
-								{text:'Сведения об образовательной организации'},
-							]
-						each item in list
-							li.main-menu-sub__item
-								a(href="#").main-menu-sub__link
-									span.main-menu-sub__text= item.text
+						.main-menu__arr
+							+svg('ic-arrow-down','ic-arrow-down', '12', '8')
 
-				.main-menu
-					.main-menu__title-wrap
+					.main-menu__content.js-main-menu-content
+						ul.main-menu-sub.js-main-menu-sub
+							-
+								var list=[
+									{text:'Аккредитация'},
+									{text:'Работа с юр. лицами и организациями'},
+									{text:'Методические материалы'},
+									{text:'Сведения об образовательной организации'},
+								]
+							each item in list
+								li.main-menu-sub__item
+									a(href="#").main-menu-sub__link
+										span.main-menu-sub__text= item.text
+
+				.main-menu.js-main-menu
+					.main-menu__title-wrap.js-main-menu-title-wrap
 						.main-menu__title Об академии
 
-					ul.main-menu-sub
-						-
-							var list=[
-								{text:'Новости и события'},
-								{text:'Отзывы'},
-								{text:'Оплата'},
-								{text:'Контакты'},
-							]
-						each item in list
-							li.main-menu-sub__item
-								a(href="#").main-menu-sub__link
-									span.main-menu-sub__text= item.text
+						.main-menu__arr
+							+svg('ic-arrow-down','ic-arrow-down', '12', '8')
+
+					.main-menu__content.js-main-menu-content
+						ul.main-menu-sub.js-main-menu-sub
+							-
+								var list=[
+									{text:'Новости и события'},
+									{text:'Отзывы'},
+									{text:'Оплата'},
+									{text:'Контакты'},
+								]
+							each item in list
+								li.main-menu-sub__item
+									a(href="#").main-menu-sub__link
+										span.main-menu-sub__text= item.text
+
+				.info-slider-wrap
+					.swiper.info-slider.js-info-slider-mobile
+						.swiper-wrapper
+							-
+								var list=[
+									{text:'Новая образовательная программа со скидкой', sale:'30%', img:'people.png'},
+									{text:'Новая образовательная программа со скидкой', sale:'40%', img:'people.png'},
+									{text:'Новая образовательная программа со скидкой', sale:'20%', img:'people.png'},
+									{text:'Новая образовательная программа со скидкой', sale:'10%', img:'people.png'},
+								]
+							each item in list
+								.swiper-slide.info-slider__item
+									.info-slider__content
+										.info-slider__text
+											span.info-slider__text-accent Новая 
+											|образовательная программа со скидкой
+										.info-slider__sale= item.sale
+
+									.info-slider__img
+										img(src="/upload/"+item.img, alt="")
+
+					.swiper-pagination.js-info-slider-pagination-mobile
 
 			.header-popup__bottom
 				.header-popup__address 344068, Россия, г.&nbsp;Ростов-на-Дону, пр.&nbsp;М.&nbsp;Нагибина, 33А/47
 
 				.header-popup__footer
 					.header-popup__copyright Copyright © 2024 ЮЖНЫЙ УНИВЕРСИТЕТ (ИУБиП)
+					.header-popup__address 344068, Россия, г.&nbsp;Ростов-на-Дону, пр.&nbsp;М.&nbsp;Нагибина, 33А/47
 					
 					.social
 						a(href="#", target="_blank").social__item

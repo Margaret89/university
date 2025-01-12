@@ -62,7 +62,11 @@
 		.btn{min-width: 332px;}
 	}
 
-	&__bottom{margin-top: 65px;}
+	&__bottom{
+		margin-top: 65px;
+
+		.sidebar-info{display: none;}
+	}
 
 	&__address{
 		max-width: 225px;
@@ -88,6 +92,7 @@
 			.icon{color: #fff;}
 		}
 	}
+
 
 	&_thin{width: 388px;}
 	&_thin &__top{padding-left: 28px;}
@@ -236,5 +241,148 @@
 		.icon{color: #000;}
 
 		&:hover{opacity: 1;}
+	}
+}
+
+@media (max-width: 1439px) {
+	.sidebar{
+		width: 388px;
+
+		&__top{padding-left: 28px;}
+
+		&__content{
+			padding: 24px 28px 32px;
+
+			.sidebar-info{display: none;}
+		}
+
+		&__label{
+			max-width: 245px;
+			font-size: 1.4rem;
+			text-align: center;
+			margin-left: auto;
+			margin-right: auto;
+			margin-bottom: 8px;
+		}
+
+		&__title{
+			font-size: 3rem;
+			text-align: center;
+		}
+
+		&__name{margin-top: 0;}
+		&__bottom{margin-top: auto;}
+
+		&__content{
+			gap: 24px;
+			padding: 24px 28px 32px;
+		}
+
+		&__btn{margin-top: 34px;}
+		&__btn .btn{padding: 0 30px;}
+		&__btn .btn .icon{display: none;}
+
+		&__footer{
+			flex-direction: column-reverse;
+			gap: 18px;
+			margin-top: 20px;
+		}
+
+		&__address{
+			margin-left: auto;
+			margin-right: auto;
+			text-align: center;
+		}
+
+		&__bottom{
+			.sidebar-info{display: block;}
+		}
+	}
+
+	.partners{
+		gap: 12px;
+		margin-top: 32px;
+		
+		&__item{gap: 7px;}
+		&__img{max-width: 40px;}
+
+		&__label{
+			max-width: 80px;
+			font-size: 0.7rem;
+		}
+	}
+
+	.sidebar-info{
+		flex-direction: column;
+		gap: 24px;
+		text-align: center;
+	}
+
+	.visually{
+		&__label{display: none;}
+	}
+}
+
+@media (max-width: 991px) {
+	.sidebar{
+		flex: 1 1 0;
+		width: auto;
+		height: auto;
+		
+		&__top{display: none;}
+
+		&__content{
+			padding: 20px 16px;
+			overflow-y: visible;
+		}
+
+		&__label{
+			max-width: none;
+			font-size: 1.2rem;
+		}
+
+		&__btn{
+			align-items: center;
+			gap: 10px;
+			margin-top: 18px;
+
+			.btn{
+				width: 347px;
+				max-width: 100%;
+
+				.icon{display: block;}
+			}
+		}
+
+		&__bottom{
+			.sidebar-info{display: none;}
+		}
+
+		&__address{
+			max-width: none;
+			font-size: 1rem;
+			margin-top: 17px;
+		}
+
+		&__footer{
+			margin-top: 8px;
+			.social{display: none;}
+		}
+
+		&__copyright{font-size: 0.8rem;}
+	}
+
+	.partners{
+		justify-content: center;
+		gap: 10px;
+		margin-top: 0;
+		
+		&__item{gap: 6px;}
+		&__img{max-width: 30px;}
+
+		&__label{
+			max-width: 60px;
+			font-size: 0.6rem;
+		}
 	}
 }

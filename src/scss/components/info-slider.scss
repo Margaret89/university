@@ -26,6 +26,7 @@
 		align-items: flex-end;
 		padding: 32px 84px 32px 62px;
 		box-sizing: border-box;
+		overflow: hidden;
 	}
 
 	&__text{
@@ -72,4 +73,27 @@
 
 	.swiper-button-prev{left: 20px;}
 	.swiper-button-next{right: 20px;}
+}
+
+@media (max-width: 1279px) {
+	.info-slider{
+		&__text{font-size: 2rem;}
+		&__sale{font-size: 5rem;}
+	}
+}
+
+@media (max-width: 767px) {
+	.info-slider{
+		&__item{padding: 44px 84px 44px 34px;}
+		&__sale{font-size: 3.6rem;}
+		&__text{font-size: 1.5rem;}
+		&__text-accent{font-size: 3rem;}
+		&__content{width: 52%;}
+
+		&__img{
+			width: calc(50% + 120px);
+			margin-bottom: -44px;
+			margin-top: -44px;
+		}
+	}
 }

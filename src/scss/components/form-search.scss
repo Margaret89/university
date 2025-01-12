@@ -59,3 +59,48 @@
 		}
 	}
 }
+
+@media (max-width: 1439px) {
+	.form-search{
+		input[type="text"],
+		input[type="search"]{
+			height: 8rem;
+		}
+	}
+}
+
+@media (max-width: 991px) {
+	.form-search{
+		input[type="text"],
+		input[type="search"]{
+			height: 6rem;
+			font-size: 1.6rem;
+			padding: 0 60px 0 20px;
+		}
+
+		&__btn{
+			width: 60px;
+
+			.icon{
+				width: 30px;
+				height: 30px;
+			}
+		}
+	}
+}
+
+@media (max-width: 767px) {
+	.form-search{
+		input[type="text"],
+		input[type="search"]{
+			font-size: 1.4rem;
+		}
+
+		&__btn{
+			.icon{
+				width: 24px;
+				height: 24px;
+			}
+		}
+	}
+}

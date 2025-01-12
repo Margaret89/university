@@ -30,6 +30,13 @@ Fancybox.bind("[data-fancybox]", {
 import  Choices from 'choices.js/public/assets/scripts/choices.js';
 import 'choices.js/public/assets/styles/choices.min.css';
 
+// Ширина экрана
+let screenWidth = window.screen.width;
+
+window.addEventListener('resize', () => {
+	screenWidth = window.screen.width;
+});
+
 document.addEventListener("DOMContentLoaded", function(){
 	// Маска для телефона
 	if(document.querySelector('.js-phone')){
@@ -76,6 +83,18 @@ if(document.querySelector('.js-info-slider')){
 	});
 }
 
+//Слайдер предложений в сайдбаре
+if(document.querySelector('.js-info-slider-mobile')){
+	var infoSliderMobile = new Swiper('.js-info-slider-mobile', {
+		modules: [Pagination],
+		loop: true,
+		pagination:{
+			el:".js-info-slider-pagination-mobile",
+			clickable:true
+		},
+	});
+}
+
 //Слайдер партнеров
 if(document.querySelector('.js-partners-slider')){
 	var partnersSlider = new Swiper('.js-partners-slider', {
@@ -98,7 +117,7 @@ document.querySelector('.js-switch-header-popup').addEventListener('click', func
 
 // Раскрывающийся блок
 document.querySelectorAll('.js-unwrap-block').forEach((accSection) => {
-	const accHeader = accSection.querySelector('.js-unwrap-head ');
+	const accHeader = accSection.querySelector('.js-unwrap-head');
 	const accBody = accSection.querySelector('.js-unwrap-content');
 	const accContent = accSection.querySelector('.js-unwrap-info');
 	
@@ -111,6 +130,25 @@ document.querySelectorAll('.js-unwrap-block').forEach((accSection) => {
 			accBody.style.maxHeight = "0px";
 		}
 	})
+});
+
+// Открыть/Закрыть мобильное меню
+document.querySelectorAll('.js-main-menu').forEach((accSection) => {
+	if(screenWidth < 992){
+		const accHeader = accSection.querySelector('.js-main-menu-title-wrap');
+		const accBody = accSection.querySelector('.js-main-menu-content');
+		const accContent = accSection.querySelector('.js-main-menu-sub');
+		
+		accHeader.addEventListener('click', () => {
+			accSection.classList.toggle("opened");
+			
+			if ( accSection.classList.contains("opened") ) {
+				accBody.style.maxHeight = `${accContent.clientHeight}px`;
+			} else {
+				accBody.style.maxHeight = "0px";
+			}
+		})
+	}
 });
 
 // Валидация форм

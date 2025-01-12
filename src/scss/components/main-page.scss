@@ -32,3 +32,12 @@
 		}
 	}
 }
+
+@media (max-width: 991px) {
+	.main-page{
+		padding: 0 0 79%;
+		margin-top: -60px;
+
+		.info-slider-wrap{display: none;}
+	}
+}

@@ -14,7 +14,6 @@
 		align-items: flex-end;
 		justify-content: space-between;
 		gap: 30px;
-		margin-bottom: 30px;
 	}
 
 	&__title{
@@ -31,6 +30,8 @@
 
 		&:hover{color: var(--color-primary);}
 	}
+
+	&__arr{display: none;}
 }
 
 .main-menu-sub{
@@ -40,6 +41,8 @@
 		padding: 0;
 		list-style: none;
 	}
+
+	&{padding-top: 30px;}
 
 	&__item::before{display: none;}
 	&__item:not(:last-child){border-bottom: 1px solid #849FC9;}
@@ -81,4 +84,110 @@
 
 	&__link:hover &__text{color: var(--color-primary);}
 	&__link:hover &__arr{transform: translateX(20px);}
+}
+
+@media (max-width: 1439px) {
+	.main-menu{
+		width: calc(25% - 30px);
+
+		&_wide{
+			width: calc(50% - 30px);
+			padding-right: 0;
+		}
+	}
+}
+
+@media (max-width: 1279px) {
+	.main-menu{
+		&__title{font-size: 2.4rem;}
+		&__more{font-size: 1.4rem;}
+	}
+
+	.main-menu-sub{
+		&__text{font-size: 1.8rem;}
+	}
+}
+
+@media (max-width: 991px) {
+	.main-menu{
+		&,
+		&_wide{
+			width: 100%;
+		}
+
+		&__title-wrap{
+			align-items: center;
+			justify-content: flex-start;
+			gap: 10px;
+		}
+
+		&_wide &__title-wrap{
+			align-items: flex-end;
+			justify-content: space-between;
+		}
+
+		&__arr{
+			display: block;
+			transform-origin: center;
+			transition: all 0.5s ease;
+			margin-top: 5px;
+
+			.icon{
+				display: block;
+				color: var(--color-primary);
+			}
+		}
+
+		&__content{
+			max-height: 0;
+			overflow: hidden;
+			transition: all 0.5s;
+		}
+
+		&_wide &__content{
+			max-height: none;
+			overflow: visible;
+		}
+
+		&.opened &__arr{transform: rotate(180deg);}
+	}
+
+	.main-menu-sub{
+		&__item:not(:last-child){
+			border: none;
+			margin-bottom: 5px;
+		}
+
+		&__link{
+			background: #F0F6FF;
+			border-radius: 10px;
+			padding: 10px 12px;
+		}
+
+		&__arr{
+			.icon{color: rgba(78, 104, 144, 0.2);}
+		}
+	}
+}
+
+@media (max-width: 767px) {
+	.main-menu{
+		&__title{font-size: 1.8rem;}
+	}
+
+	.main-menu-sub{
+		&__icon{
+			width: 30px;
+			height: 30px;
+
+			.icon{
+				width: 20px;
+				height: 17px;
+			}
+		}
+
+		&__link{gap: 10px;}
+
+		&__text{font-size: 1.6rem;}
+	}
 }

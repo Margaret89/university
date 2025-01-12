@@ -316,3 +316,26 @@ button.btn{
 .text-uppercase{text-transform: uppercase !important;}
 .text-bold {font-weight: 700 !important;}
 .text-color {color: var(--color-primary) !important;}
+
+@media (max-width: 991px) {
+	.wrapper{
+		flex-direction: column-reverse;
+		justify-content: flex-end;
+		min-height: 100vh;
+	}
+
+	main{
+		height: auto;
+		overflow-y: visible;
+	}
+
+	.btn,
+	input[type="submit"].btn,
+	button.btn{
+		&_big{
+			height: 5rem;
+			border-radius: 2.5rem;
+			font-size: 1.4rem;
+		}
+	}
+}

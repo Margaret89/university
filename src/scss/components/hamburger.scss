@@ -84,3 +84,48 @@
 		span::after {bottom: -12px;}
 	}
 }
+
+@media (max-width: 1439px) {
+	.ic-hamburger{
+		width: 80px;
+		height: 80px;
+
+		span,
+		span::before,
+		span::after{
+			height: 4px;
+		}
+
+		span{
+			width: calc(100% - 40px);
+			left: 20px;
+			top: 38px;
+
+		}
+
+		span::before {top: -12px;}
+		span::after {bottom: -12px;}
+	}
+}
+
+@media (max-width: 991px) {
+	.ic-hamburger{
+		width: 60px;
+		height: 60px;
+
+		span,
+		span::before,
+		span::after{
+			height: 3px;
+		}
+
+		span{
+			width: calc(100% - 32px);
+			left: 16px;
+			top: 28px;
+		}
+
+		span::before {top: -9px;}
+		span::after {bottom: -9px;}
+	}
+}
