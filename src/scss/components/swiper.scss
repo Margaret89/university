@@ -1,0 +1,33 @@
+/*-------------- swiper -----------------*/
+body .swiper{
+	display: none;
+	&.swiper-initialized{display: block;}
+}
+
+body .swiper-pagination-bullet{
+	width: 10px;
+	height: 10px;
+	background: #D5D5D5;
+	opacity: 0.3;
+	transition: opacity 0.2s ease 0s;
+
+	&:hover{opacity: 1}
+}
+
+body .swiper-pagination-bullet-active{
+	opacity: 1;
+	background: var(--color-primary);
+}
+
+body .swiper-horizontal > .swiper-pagination-bullets .swiper-pagination-bullet,
+body .swiper-pagination-horizontal.swiper-pagination-bullets .swiper-pagination-bullet{
+	margin: 0;
+}
+
+body .swiper-pagination{
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+	align-items: center;
+	gap: 10px;
+}

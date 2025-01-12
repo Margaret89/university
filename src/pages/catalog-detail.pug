@@ -1,0 +1,399 @@
+extends tmpl/_layout
+
+block vars
+	- var pageId = 'catalog'
+	-
+		var breadcrumbs=[
+			{href:'/',name:'Главная'},
+			{href:'#',name:'Каталог'},
+			{href:'#',name:'Здравоохранение'},
+			{href:'#',name:'Курс аллергология и иммунология'},
+		];
+
+block sidebar
+	aside.sidebar.sidebar_thin
+		.sidebar__top
+			.sidebar__top-link
+				a(href="#") Сведения об образовательной организации
+
+			a(href="#").visually
+				.visually__icon
+					+svg('ic-eye','ic-eye', '22', '14')
+
+		.sidebar__content
+			.product-info
+				.product-info__img
+					img(src="/upload/catalog-detail.jpg", alt="")
+
+				.product-info__title Аллергология и иммунология
+
+				.product-info__prices
+					span.product-info__old-price 59&nbsp;760&nbsp;&#8381;
+					span.product-info__cur-price 49&nbsp;800&nbsp;&#8381;
+
+				.product-info__btn
+					a.btn.btn_red.btn_big(href='#') Оставить заявку
+			
+			.sidebar__bottom
+				.partners
+					.partners__item
+						.partners__img
+							img(src="/upload/partner1.png", alt="")
+
+						.partners__label МИНИСТЕРСТВО НАУКИ И ВЫСШЕГО ОБРАЗОВАНИЯ РФ
+
+					.partners__item
+						.partners__img
+							img(src="/upload/partner2.png", alt="")
+
+						.partners__label
+							|НМО
+							br
+							|МИНЗДРАВА
+							br
+							|РОССИИ
+
+					.partners__item
+						.partners__img
+							img(src="/upload/partner3.png", alt="")
+
+						.partners__label
+							|МИНТРУД
+							br
+							|РОССИИ
+
+				.sidebar__address 344068, Россия, г. Ростов-на-Дону, пр. М. Нагибина, 33А/47
+
+				.sidebar__footer
+					.sidebar__copyright Copyright © 2024 ЮЖНЫЙ УНИВЕРСИТЕТ (ИУБиП)
+					
+					.social
+						a(href="#", target="_blank").social__item
+							+svg('ic-youtube','ic-youtube', '22', '15')
+
+						a(href="#", target="_blank").social__item
+							+svg('ic-telegram','ic-telegram', '20', '17')
+
+						a(href="#", target="_blank").social__item
+							+svg('ic-vk','ic-vk', '20', '20')
+
+						a(href="#", target="_blank").social__item
+							+svg('ic-ok','ic-ok', '20', '20')
+
+block body
+	include ./tmpl/_header-short
+
+	.page-content
+		.page-content__bg
+
+		.page-title
+			h1 Что входит в курс «Аллергология и иммунология»
+
+		.catalog-detail
+			.catalog-detail__data
+				-
+					var list=[
+						{label:'Тип обучения:', val:'Профессиональная переподготовка'},
+						{label:'Формат:', val:'Дистанционный'},
+						{label:'Продолжительность:', val:'600 часов'},
+					]
+				each item in list
+					.catalog-detail-info
+						.catalog-detail-info__label= item.label
+						.catalog-detail-info__val= item.val
+
+			.table-wrap
+				.table-wrap__title Учебный план
+
+				table.table-site
+					thead
+						tr
+							th Название
+							th.text-center Часы
+							th.text-center Лекции
+							th.text-center Практики
+
+					tbody
+						-
+							var list=[
+								{
+									name:'Соц. гигиена и организация аллергологической и иммунологической помощи в РФ',
+									hours:'36 ч.',
+									lectures:'4 ч.',
+									practices:'20 ч.',
+								},
+								{
+									name:'Теоретические основы иммунологии и аллергологии',
+									hours:'36 ч.',
+									lectures:'4 ч.',
+									practices:'20 ч.',
+								},
+								{
+									name:'Специфическая аллергологическая диагностика',
+									hours:'36 ч.',
+									lectures:'4 ч.',
+									practices:'20 ч.',
+								},
+								{
+									name:'Пыльцевая и латексная аллергия',
+									hours:'36 ч.',
+									lectures:'4 ч.',
+									practices:'20 ч.',
+								},
+								{
+									name:'Лекарственная аллергия',
+									hours:'36 ч.',
+									lectures:'4 ч.',
+									practices:'20 ч.',
+								},
+								{
+									name:'Анафилаксия',
+									hours:'36 ч.',
+									lectures:'4 ч.',
+									practices:'20 ч.',
+								},
+								{
+									name:'Аллергические поражения кожи и заболевания органов дыхания',
+									hours:'36 ч.',
+									lectures:'4 ч.',
+									practices:'20 ч.',
+								},
+								{
+									name:'Пищевая аллергия',
+									hours:'36 ч.',
+									lectures:'4 ч.',
+									practices:'20 ч.',
+								},
+								{
+									name:'Профилактика и терапия аллергических заболеваний ',
+									hours:'36 ч.',
+									lectures:'4 ч.',
+									practices:'20 ч.',
+								},
+								{
+									name:'Итоговый междисциплинарный экзамен',
+									hours:'36 ч.',
+									lectures:'4 ч.',
+									practices:'20 ч.',
+								},
+							]
+						each item in list
+							tr
+								td= item.name
+								td.text-center= item.hours
+								td.text-center= item.lectures
+								td.text-center= item.practices
+
+			.learn-block.mt-indent
+				h2 Как проходит обучение
+
+				.learn-list
+					-
+						var list=[
+							{
+								img:'learn1.jpg',
+								icon:'ic-play',
+								icon_width:'35',
+								icon_height:'35',
+								title:'Видео-уроки',
+								text:'Учебный материал подается в удобной формате видеоуроков.',
+							},
+							{
+								img:'learn2.jpg',
+								icon:'ic-trainer',
+								icon_width:'35',
+								icon_height:'35',
+								title:'Он-лайн тренажеры',
+								text:'Внутри обучающей платформы Вы сможете отработать навыки на симуляционных цифровых тренажерах.',
+							},
+							{
+								img:'learn3.jpg',
+								icon:'ic-book',
+								icon_width:'29',
+								icon_height:'35',
+								title:'Электронная библиотека',
+								text:'Доступ к закрытому ресурсу новейших учебников, методичек и журналов в сфере здравоохранения.',
+							},
+						]
+					each item in list
+						.learn-item
+							.learn-item__img-wrap
+								.learn-item__img
+									img(src="/upload/"+item.img, alt="")
+
+							.learn-item__content
+								.learn-item__icon
+									+svg(item.icon, item.icon, item.icon_width, item.icon_height)
+								.learn-item__title= item.title
+								.learn-item__text= item.text
+
+			.faq.mt-indent
+				h2.faq__title Часто задаваемые вопросы
+				
+				.faq__content
+					-
+						var list=[
+							{title:'Какой возрастной контингент в группах?', text:'В группах повышения квалификации возраст не ограничен.'},
+							{title:'Чем отличается профпереподготовка от второго высшего образования?', text:'Текст'},
+							{title:'Обязательно приезжать за дипломом и (или) на сдачу итоговой работы?', text:'Текст'},
+							{title:'У меня очень плохой интернет, что делать?', text:'Текст'},
+							{title:'Как Вы узнаете , что я оплатил?', text:'Текст'},
+							{title:'Как происходит итоговая аттестация?', text:'Текст'},
+						]
+					each item in list
+						.unwrap-block.js-unwrap-block
+							.unwrap-block__head.js-unwrap-head
+								.unwrap-block__title= item.title
+
+								.unwrap-block__arr
+									+svg('ic-arrow-down','ic-arrow-down', '12', '8')
+							.unwrap-block__content.js-unwrap-content
+								.unwrap-block__info.js-unwrap-info= item.text
+
+			.form-page.mt-indent
+				.form-page__content
+					.js-valid-form
+						form(action="#").form-site
+							.form-site__title Бесплатная консультация по курсу
+
+							.form-site__content
+								.form-site__item.form-site__item_third.js-form-site-item
+									.form-site__field
+										input(name="name", type="text", required="required", id="name",  placeholder=" ")
+										label.form-site__label(for="name") Ваше имя
+
+								.form-site__item.form-site__item_third.js-form-site-item
+									.form-site__field
+										input(name="phone", type="text", required="required", id="phone", class="js-phone",  placeholder=" ")
+										label.form-site__label(for="phone") + 7 (999) 999-99-99
+
+								.form-site__item.form-site__item_third.js-form-site-item
+									.form-site__field
+										input(name="email", type="email", required="required", id="email",  placeholder=" ")
+										label.form-site__label(for="email") Электронная почта
+
+								.form-site__item.js-form-site-item
+									.form-site__field
+										textarea(name="question", id="question", placeholder=" ")
+										label.form-site__label(for="question") Ваш вопрос
+
+							.form-site__polit
+								label.input-check
+									input(type='checkbox')
+									span.input-check__mark
+										+svg('ic-check','ic-check', '10', '7')
+									span.input-check__text Согласен на обработку 
+										a(href="#") персональных данных
+
+							.form-site__btn
+								input(type="submit", value="Отправить").btn.js-btn-submit
+
+				.form-page__img
+					img(src="/upload/man.png", alt="")
+
+			.reviews.mt-indent
+				h2 Отзывы наших слушателей
+				
+				.reviews-list
+					-
+						var list=[
+							{
+								text:'Удобная платформа, лекции, видеоматериалы, тесты, всё очень компактно и интересно. полезные вебинары и молодцы сотрудники вуза всё продумали и разницу во времени. Мне было интересно пообщаться с коллегами из других регионов.',
+								img:'author1.jpg',
+								name:'Алиса К.',
+								post:'Врач-невролог',
+							},
+							{
+								text:'По социальной защите населения очень мало предложений в интернете по повышению квалификации. Рады были, когда нам позвонили с предложением. С этими профстандартами реально много изменений уже идет и сложно было сориентироваться.  Теперь у нас есть представление что с этим делать. и должностные инструкции помогли сделать.',
+								img:'author2.jpg',
+								name:'Екатерина К.',
+								post:'Врач-невролог',
+							},
+							{
+								text:'Долго выбирала нормальный Университет, чтобы пройти переподготовку. Чтобы не просто диплом дали, но ведь и знания нужны... как работать? у нас в школу пришли 2 ребенка - олигофрена, диплом - хорошо, но что мне с ними делать? а здесь и нормальные материалы дали и тренажеры и даже свежие программы адаптированные. я очень  благодарна. сейчас редкость вот так отучиться - и чтобы всё сошлось: и цена, и знания и подход человеческий. спасибо коллективу. умнички!',
+								img:'author3.jpg',
+								name:'Марина М.',
+								post:'Педагог-психолог',
+							},
+							{
+								text:'По социальной защите населения очень мало предложений в интернете по повышению квалификации. Рады были, когда нам позвонили с предложением. С этими профстандартами реально много изменений уже идет и сложно было сориентироваться.  Теперь у нас есть представление что с этим делать. и должностные инструкции помогли сделать.',
+								img:'author4.jpg',
+								name:'Анатолий Ч.',
+								post:'Врач-невролог',
+							},
+						]
+					each item in list
+						.review-item
+							.review-item__text= item.text
+
+							.review-item-author
+								.review-item-author__img
+									img(src="/upload/"+item.img, alt="")
+
+								.review-item-author__content
+									.review-item-author__name= item.name
+									.review-item-author__post= item.post
+
+			.partners-slider-wrap.mt-indent
+				h2 Наши партнеры
+
+				.swiper.partners-slider.js-partners-slider
+					.swiper-wrapper
+						-
+							var list=[
+								{img:'partner-color1.png'},
+								{img:'partner-color2.png'},
+								{img:'partner-color3.png'},
+								{img:'partner-color4.png'},
+								{img:'partner-color2.png'},
+								{img:'partner-color3.png'},
+							]
+						each item in list
+							.swiper-slide.partners-slider__item
+								.partners-slider__img-wrap
+									.partners-slider__img
+										img(src="/upload/"+item.img, alt="")
+
+				.swiper-pagination.js-partners-slider-pagination
+
+		.catalog-other.mt-indent
+			.catalog-other__title Возможно, вам подойдут эти курсы из раздела «Здравоохранение»:
+
+			.catalog-other__list
+				-
+					var list=[
+						{
+							img:'catalog-block1.jpg',
+							title:'Актуальные вопросы диагностики и лечения травм',
+							old_price:'3 480',
+							cur_price:'2 900',
+						},
+						{
+							img:'catalog-block2.jpg',
+							title:'Аллергология и иммунология',
+							old_price:'3 480',
+							cur_price:'2 900',
+						},
+						{
+							img:'catalog-block3.jpg',
+							title:'Артериальная гипертония и хроническая сердечная недостаточность',
+							old_price:'3 480',
+							cur_price:'2 900',
+						},
+					]
+				each item in list
+					.catalog-block
+						a(href="#").catalog-block__img-wrap
+							.catalog-block__img
+								img(src="/upload/"+item.img, alt="")
+
+						.catalog-block__content
+							.catalog-block__title
+								a(href="#")= item.title
+
+							.catalog-block__prices
+								span.catalog-block__old-price= item.old_price
+									|&nbsp;&#8381;
+								span.catalog-block__cur-price= item.cur_price
+									|&nbsp;&#8381;
+									

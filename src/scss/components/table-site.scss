@@ -1,0 +1,30 @@
+/*-------------- table-site -----------------*/
+.table-wrap{
+	background: #fff;
+	border-radius: 20px;
+	padding: 27px 30px;
+	box-shadow: 0px 0px 35px 0px rgba(29,148,236,0.15);
+
+	&__title{
+		font-size: 1.6rem;
+		font-weight: 500;
+		margin-bottom: 24px;
+	}
+}
+
+.table-site{
+	width: 100%;
+	font-weight: 500;
+
+	th, td{padding: 14px 18px 13px;}
+
+	th{
+		background: #E6ECF4;
+		font-weight: normal;
+	}
+
+	th:first-child{border-radius: 10px 0 0 10px;}
+	th:last-child{border-radius: 0 10px 10px 0;}
+
+	td{border-bottom: 1px solid rgba(132, 159, 201, 0.2);}
+}

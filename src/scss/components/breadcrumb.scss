@@ -15,7 +15,7 @@
 	}
 
 	&__item{
-		@include font(none, none, 1.2rem, 1.258, #C1C1C1);
+		@include font(none, none, 1.2rem, none, #C1C1C1);
 
 		&::before{display: none;}
 

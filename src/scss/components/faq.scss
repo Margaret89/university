@@ -1,0 +1,11 @@
+/*-------------- faq -----------------*/
+.faq{
+	display: flex;
+	gap: 20px;
+
+	&__title{
+		width: calc(33.33% - 13.33px);
+	}
+
+	&__content{width: calc(66.66% - 13.33px);}
+}

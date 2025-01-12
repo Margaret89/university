@@ -12,6 +12,10 @@
 			"href": "catalog-list.html",
 			"title":"Каталог список"
 		},
+		"catalog-detail":{
+			"href": "catalog-detail.html",
+			"title":"Каталог детальная"
+		},
 		"tipografika":{
 			"href": "tipografika.html",
 			"title":"Типографика",
