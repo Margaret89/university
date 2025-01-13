@@ -3,9 +3,17 @@
 	display: flex;
 	gap: 20px;
 
-	&__title{
-		width: calc(33.33% - 13.33px);
-	}
-
+	&__title{width: calc(33.33% - 13.33px);}
 	&__content{width: calc(66.66% - 13.33px);}
+}
+
+@media (max-width: 1279px) {
+	.faq{
+		flex-direction: column;
+
+		&__title,
+		&__content{
+			width: 100%;
+		}
+	}
 }

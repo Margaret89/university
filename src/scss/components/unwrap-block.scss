@@ -55,3 +55,15 @@
 		.icon{color: #D4E2ED;}
 	}
 }
+
+@media (max-width: 767px) {
+	.unwrap-block{
+		&__head{
+			font-size: 1.4rem;
+			padding: 10px 12px 10px 20px;
+		}
+
+		&__content{font-size: 1.4rem;}
+		&__info{padding: 6px 20px 7px;}
+	}
+}

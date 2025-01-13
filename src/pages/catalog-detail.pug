@@ -21,6 +21,27 @@ block sidebar
 					+svg('ic-eye','ic-eye', '22', '14')
 
 		.sidebar__content
+			.sidebar-info.sidebar-info_mobile
+				.sidebar-info__logo
+					img(src="/upload/logo.svg", alt="")
+
+			.sidebar__main.sidebar__main_mobile
+				.sidebar__name
+					.sidebar__label Академия Профессионального Образования
+					.sidebar__title Южный университет
+
+				.sidebar-info
+					.sidebar-info__content
+						.sidebar-info__label Горячая линия (звонок бесплатный)
+
+						.sidebar-info__phone
+							a(href="tel:+78002226806") 8 800 222-68-06
+
+				.sidebar__btn
+					a.btn.btn_red.btn_big(href='#') Оставить заявку
+					a.btn.btn_border-white.btn_big(href='#') Перейти в каталог программ
+						+svg('ic-arr-right','ic-arr-right', '26', '9')
+
 			.product-info
 				.product-info__img
 					img(src="/upload/catalog-detail.jpg", alt="")
@@ -35,6 +56,23 @@ block sidebar
 					a.btn.btn_red.btn_big(href='#') Оставить заявку
 			
 			.sidebar__bottom
+				.social
+					a(href="#", target="_blank").social__item
+						+svg('ic-youtube','ic-youtube', '22', '15')
+
+					a(href="#", target="_blank").social__item
+						+svg('ic-telegram','ic-telegram', '20', '17')
+
+					a(href="#", target="_blank").social__item
+						+svg('ic-vk','ic-vk', '20', '20')
+
+					a(href="#", target="_blank").social__item
+						+svg('ic-ok','ic-ok', '20', '20')
+
+				.map
+					iframe(src='https://yandex.ru/map-widget/v1/?um=constructor%3A7d88bdbed3d341f7ed561c9aea96dac66b1b4ec85ccc6940250863cdf72a2222&source=constructor' width='100%', frameborder='0')
+				
+				
 				.partners
 					.partners__item
 						.partners__img
@@ -103,86 +141,91 @@ block body
 						.catalog-detail-info__val= item.val
 
 			.table-wrap
-				.table-wrap__title Учебный план
+				.table-wrap__top
+					.table-wrap__title Учебный план
 
-				table.table-site
-					thead
-						tr
-							th Название
-							th.text-center Часы
-							th.text-center Лекции
-							th.text-center Практики
+					.table-wrap__icon
+						+svg('ic-scroll','ic-scroll', '32', '22')
 
-					tbody
-						-
-							var list=[
-								{
-									name:'Соц. гигиена и организация аллергологической и иммунологической помощи в РФ',
-									hours:'36 ч.',
-									lectures:'4 ч.',
-									practices:'20 ч.',
-								},
-								{
-									name:'Теоретические основы иммунологии и аллергологии',
-									hours:'36 ч.',
-									lectures:'4 ч.',
-									practices:'20 ч.',
-								},
-								{
-									name:'Специфическая аллергологическая диагностика',
-									hours:'36 ч.',
-									lectures:'4 ч.',
-									practices:'20 ч.',
-								},
-								{
-									name:'Пыльцевая и латексная аллергия',
-									hours:'36 ч.',
-									lectures:'4 ч.',
-									practices:'20 ч.',
-								},
-								{
-									name:'Лекарственная аллергия',
-									hours:'36 ч.',
-									lectures:'4 ч.',
-									practices:'20 ч.',
-								},
-								{
-									name:'Анафилаксия',
-									hours:'36 ч.',
-									lectures:'4 ч.',
-									practices:'20 ч.',
-								},
-								{
-									name:'Аллергические поражения кожи и заболевания органов дыхания',
-									hours:'36 ч.',
-									lectures:'4 ч.',
-									practices:'20 ч.',
-								},
-								{
-									name:'Пищевая аллергия',
-									hours:'36 ч.',
-									lectures:'4 ч.',
-									practices:'20 ч.',
-								},
-								{
-									name:'Профилактика и терапия аллергических заболеваний ',
-									hours:'36 ч.',
-									lectures:'4 ч.',
-									practices:'20 ч.',
-								},
-								{
-									name:'Итоговый междисциплинарный экзамен',
-									hours:'36 ч.',
-									lectures:'4 ч.',
-									practices:'20 ч.',
-								},
-							]
-						each item in list
+				.table-wrap__content
+					table.table-site
+						thead
 							tr
-								td= item.name
-								td.text-center= item.hours
-								td.text-center= item.lectures
-								td.text-center= item.practices
+								th Название
+								th.text-center Часы
+								th.text-center Лекции
+								th.text-center Практики
+
+						tbody
+							-
+								var list=[
+									{
+										name:'Соц. гигиена и организация аллергологической и иммунологической помощи в РФ',
+										hours:'36 ч.',
+										lectures:'4 ч.',
+										practices:'20 ч.',
+									},
+									{
+										name:'Теоретические основы иммунологии и аллергологии',
+										hours:'36 ч.',
+										lectures:'4 ч.',
+										practices:'20 ч.',
+									},
+									{
+										name:'Специфическая аллергологическая диагностика',
+										hours:'36 ч.',
+										lectures:'4 ч.',
+										practices:'20 ч.',
+									},
+									{
+										name:'Пыльцевая и латексная аллергия',
+										hours:'36 ч.',
+										lectures:'4 ч.',
+										practices:'20 ч.',
+									},
+									{
+										name:'Лекарственная аллергия',
+										hours:'36 ч.',
+										lectures:'4 ч.',
+										practices:'20 ч.',
+									},
+									{
+										name:'Анафилаксия',
+										hours:'36 ч.',
+										lectures:'4 ч.',
+										practices:'20 ч.',
+									},
+									{
+										name:'Аллергические поражения кожи и заболевания органов дыхания',
+										hours:'36 ч.',
+										lectures:'4 ч.',
+										practices:'20 ч.',
+									},
+									{
+										name:'Пищевая аллергия',
+										hours:'36 ч.',
+										lectures:'4 ч.',
+										practices:'20 ч.',
+									},
+									{
+										name:'Профилактика и терапия аллергических заболеваний ',
+										hours:'36 ч.',
+										lectures:'4 ч.',
+										practices:'20 ч.',
+									},
+									{
+										name:'Итоговый междисциплинарный экзамен',
+										hours:'36 ч.',
+										lectures:'4 ч.',
+										practices:'20 ч.',
+									},
+								]
+							each item in list
+								tr
+									td= item.name
+									td.text-center= item.hours
+									td.text-center= item.lectures
+									td.text-center= item.practices
 
 			.learn-block.mt-indent
 				h2 Как проходит обучение
@@ -224,8 +267,9 @@ block body
 							.learn-item__content
 								.learn-item__icon
 									+svg(item.icon, item.icon, item.icon_width, item.icon_height)
-								.learn-item__title= item.title
-								.learn-item__text= item.text
+								.learn-item__info
+									.learn-item__title= item.title
+									.learn-item__text= item.text
 
 			.faq.mt-indent
 				h2.faq__title Часто задаваемые вопросы
@@ -289,7 +333,9 @@ block body
 								input(type="submit", value="Отправить").btn.js-btn-submit
 
 				.form-page__img
-					img(src="/upload/man.png", alt="")
+					picture
+						source(srcset='/upload/man-shadow.png' media='(max-width: 1279px)')
+						img(src="/upload/man.png", alt="")
 
 			.reviews.mt-indent
 				h2 Отзывы наших слушателей
@@ -341,6 +387,12 @@ block body
 					.swiper-wrapper
 						-
 							var list=[
+								{img:'partner-color1.png'},
+								{img:'partner-color2.png'},
+								{img:'partner-color3.png'},
+								{img:'partner-color4.png'},
+								{img:'partner-color2.png'},
+								{img:'partner-color3.png'},
 								{img:'partner-color1.png'},
 								{img:'partner-color2.png'},
 								{img:'partner-color3.png'},

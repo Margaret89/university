@@ -341,7 +341,20 @@ button.btn{
 }
 
 @media (max-width: 767px) {
-	.page-content{padding: 22px 20px;}
+	:root{
+		--margin-indent: 30px;
+	}
+
+	.page-content{
+		padding: 22px 20px;
+
+		&__bg{height: 108px;}
+	}
 
 	h1, .h1{font-size: 1.8rem;}
+
+	h2, .h2{
+		font-size: 2.5rem;
+		margin-bottom: 2.5rem;
+	}
 }

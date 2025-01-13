@@ -26,3 +26,27 @@
 		font-weight: 500;
 	}
 }
+
+@media (max-width: 1279px) {
+	.catalog-detail-info{
+		width: calc(50% - 10px);
+		&:first-child{width: 100%;}
+	}
+}
+
+@media (max-width: 767px) {
+	.catalog-detail{
+		&__data{
+			gap: 10px;
+			margin-bottom: 10px;
+		}
+	}
+
+	.catalog-detail-info{
+		width: calc(50% - 5px);
+		padding: 20px;
+
+		&__label{font-size: 1.2rem;}
+		&__val{font-size: 1.4rem;}
+	}
+}

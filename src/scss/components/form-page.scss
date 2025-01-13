@@ -26,6 +26,7 @@
 
 	.form-site{
 		position: relative;
+		z-index: 2;
 
 		input[type="text"],
 		input[type="email"],
@@ -46,6 +47,50 @@
 					a{color: #fff;}
 				}
 			}
+		}
+	}
+}
+
+@media (max-width: 1439px) {
+	.form-page{padding-right: 210px;}
+}
+
+@media (max-width: 1279px) {
+	.form-page{
+		padding: 250px 30px 30px;
+
+		&::before{
+			background-size: 90%;
+			background-position: center 30px;
+			left: 0;
+			right: 0;
+			margin: 0 auto;
+		}
+
+		&__img{
+			height: 210px;
+			text-align: center;
+			position: absolute;
+			bottom: auto;
+			top: 30px;
+			left: 0;
+			right: 0;
+			margin: 0 auto;
+
+			img{height: 300px;}
+		}
+	}
+}
+
+@media (max-width: 767px) {
+	.form-page{
+		padding: 114px 20px 20px;
+
+		&::before{background-position: center 8px;}
+
+		&__img{
+			top: -20px;
+			img{height: 256px;}
 		}
 	}
 }

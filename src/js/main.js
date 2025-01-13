@@ -1,9 +1,10 @@
 //Swiper
 import Swiper from 'swiper';
-import { Navigation, Pagination, Thumbs } from 'swiper/modules';
+import { Navigation, Pagination, Grid } from 'swiper/modules';
 import 'swiper/css';
 import 'swiper/css/navigation';
 import 'swiper/css/pagination';
+import 'swiper/css/grid';
 
 //Inputmask
 import Inputmask from "inputmask";
@@ -69,17 +70,6 @@ if(document.querySelector('.js-info-slider')){
 			nextEl: '.js-info-slider-next',
 			prevEl: '.js-info-slider-prev',
 		},
-		// breakpoints: {
-		// 	1600: {
-		// 		slidesPerView: 10,
-		// 	},
-		// 	992: {
-		// 		slidesPerView: 6,
-		// 	},
-		// 	767: {
-		// 		slidesPerView: 8,
-		// 	},
-		// }
 	});
 }
 
@@ -98,14 +88,30 @@ if(document.querySelector('.js-info-slider-mobile')){
 //Слайдер партнеров
 if(document.querySelector('.js-partners-slider')){
 	var partnersSlider = new Swiper('.js-partners-slider', {
-		modules: [Pagination],
+		modules: [Grid, Pagination],
 		loop: true,
-		slidesPerView: 4,
-		spaceBetween: 20,
+		slidesPerView: 2,
+		grid: {
+			rows: 2,
+			fill: "row",
+		},
+		spaceBetween: 10,
 		pagination:{
 			el:".js-partners-slider-pagination",
 			clickable:true
 		},
+		breakpoints: {
+			1280: {
+				slidesPerView: 4,
+				grid: {rows: 1},
+				spaceBetween: 20,
+			},
+			768: {
+				slidesPerView: 3,
+				grid: {rows: 1},
+				spaceBetween: 20,
+			},
+		}
 	});
 }
 
