@@ -38,6 +38,7 @@
 		font-size: 1.2rem;
 		color: #1D94EC;
 		text-decoration: none;
+		cursor: pointer;
 	}
 
 	&__clear:hover{color: var(--color-primary);}
@@ -59,7 +60,11 @@
 		margin-top: -4px;
 
 		.btn{width: 100%;}
-		.btn_border{display: none;}
+
+		.btn_border,
+		input[type="submit"].btn_border{
+			display: none;
+		}
 	}
 }
 
@@ -95,7 +100,10 @@
 		&.opened &__top &__arr{transform: rotate(180deg);}
 
 		&__btn{
-			.btn_border{display: flex;}
+			.btn_border,
+			input[type="submit"].btn_border{
+				display: flex;
+			}
 		}
 	}
 }

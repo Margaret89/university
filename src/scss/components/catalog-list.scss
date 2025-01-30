@@ -1,6 +1,7 @@
 /*-------------- catalog-list -----------------*/
 .catalog-wrap{
 	display: flex;
+	flex-direction: row-reverse;
 	justify-content: space-between;
 	gap: 60px;
 
@@ -58,6 +59,14 @@
 			left: 50%;
 			transform: translate(-50%, -50%);
 			transition: transform 0.2s ease;
+		}
+	}
+
+	&__img-empty{
+		img{
+			width: 50%;
+			height: 50%;
+			object-fit: contain;
 		}
 	}
 
@@ -122,7 +131,7 @@
 
 @media (max-width: 1279px) {
 	.catalog-wrap{
-		flex-direction: column-reverse;
+		flex-direction: column;
 
 		&__sidebar{
 			width: 100%;

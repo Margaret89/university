@@ -125,62 +125,6 @@ block body
 				+svg('ic-search','ic-search', '20', '20')
 
 		.catalog-wrap
-			.catalog-wrap__content
-				.catalog-list
-					-
-						var list=[
-							{img:'catalog-list1.jpg', title:'Аллергология и иммунология', old_price:'59 760', price:'49 800'},
-							{img:'catalog-list2.jpg', title:'Актуальные вопросы диагностики и лечения травм', old_price:'7 800', price:'5 900'},
-							{img:'catalog-list3.jpg', title:'Аллергология и иммунология', old_price:'3 480', price:'2 900'},
-							{img:'catalog-list4.jpg', title:'Артериальная гипертония и хроническая сердечная недостаточность', old_price:'3 480', price:'2 900'},
-							{img:'catalog-list5.jpg', title:'Актуальные вопросы деятельности, связанной с оборотом наркотических, психотропных веществ и их прекурсоров в медицинском учреждении', old_price:'3 480', price:'2 900'},
-							{img:'catalog-list6.jpg', title:'Курс акушерство и гинекология в общей врачебной практике', old_price:'3 480', price:'2 900'},
-							{img:'catalog-list7.jpg', title:'Курс болезни детей и подростков в общеврачебной практике', old_price:'7 800', price:'5 900'},
-						]
-					each item in list
-						.catalog-item
-							a(href="#").catalog-item__img-wrap
-								.catalog-item__img
-									img(src="/upload/"+item.img, alt="")
-
-							.catalog-item__content
-								.catalog-item__title
-									a(href="#")= item.title
-
-								.catalog-item__info
-									.catalog-item-params
-										.catalog-item-params__item
-											span.catalog-item-params__label Тип обучения: 
-											span.catalog-item-params__val Профессиональная переподготовка
-
-										.catalog-item-params__item
-											span.catalog-item-params__label Формат: 
-											span.catalog-item-params__val Дистанционный
-
-										.catalog-item-params__item
-											span.catalog-item-params__label Продолжительность: 
-											span.catalog-item-params__val 45 дней
-
-									.catalog-item__prices
-										span.catalog-item__old-price= item.old_price
-											|&nbsp;&#8381;
-										span.catalog-item__cur-price= item.price
-											|&nbsp;&#8381;
-
-				.pager
-					a.pager__item.active(href='#') 1
-					a.pager__item(href='#') 2
-					a.pager__item(href='#') 3
-					a.pager__item(href='#') 4
-					a.pager__item(href='#') ...
-					a.pager__item(href='#') 116
-
-				.info-block
-					.info-block__content
-						.info-block__title Новая
-						.info-block__text образовательная программа со скидкой
-						.info-block__sale -30%
-
 			.catalog-wrap__sidebar
 				.filter.js-filter
 					.filter__top.js-filter-top
@@ -190,7 +134,7 @@ block body
 							
 							.filter__header Фильтры
 
-						a(href="#").filter__clear Очистить
+						span.filter__clear.js-filter-clear Очистить
 						.filter__arr
 							+svg('ic-arrow-down','ic-arrow-down', '12', '8')
 
@@ -268,3 +212,61 @@ block body
 						.info-block__title Новая
 						.info-block__text образовательная программа со скидкой
 						.info-block__sale -30%
+						
+			.catalog-wrap__content
+				.catalog-list
+					-
+						var list=[
+							{img:'catalog-list1.jpg', title:'Аллергология и иммунология', old_price:'59 760', price:'49 800'},
+							{img:'catalog-list2.jpg', title:'Актуальные вопросы диагностики и лечения травм', old_price:'7 800', price:'5 900'},
+							{img:'catalog-list3.jpg', title:'Аллергология и иммунология', old_price:'3 480', price:'2 900'},
+							{img:'catalog-list4.jpg', title:'Артериальная гипертония и хроническая сердечная недостаточность', old_price:'3 480', price:'2 900'},
+							{img:'catalog-list5.jpg', title:'Актуальные вопросы деятельности, связанной с оборотом наркотических, психотропных веществ и их прекурсоров в медицинском учреждении', old_price:'3 480', price:'2 900'},
+							{img:'catalog-list6.jpg', title:'Курс акушерство и гинекология в общей врачебной практике', old_price:'3 480', price:'2 900'},
+							{img:'catalog-list7.jpg', title:'Курс болезни детей и подростков в общеврачебной практике', old_price:'7 800', price:'5 900'},
+						]
+					each item in list
+						.catalog-item
+							a(href="#").catalog-item__img-wrap
+								.catalog-item__img
+									img(src="/upload/"+item.img, alt="")
+
+							.catalog-item__content
+								.catalog-item__title
+									a(href="#")= item.title
+
+								.catalog-item__info
+									.catalog-item-params
+										.catalog-item-params__item
+											span.catalog-item-params__label Тип обучения: 
+											span.catalog-item-params__val Профессиональная переподготовка
+
+										.catalog-item-params__item
+											span.catalog-item-params__label Формат: 
+											span.catalog-item-params__val Дистанционный
+
+										.catalog-item-params__item
+											span.catalog-item-params__label Продолжительность: 
+											span.catalog-item-params__val 45 дней
+
+									.catalog-item__prices
+										span.catalog-item__old-price= item.old_price
+											|&nbsp;&#8381;
+										span.catalog-item__cur-price= item.price
+											|&nbsp;&#8381;
+
+				.pager
+					a.pager__item.active(href='#') 1
+					a.pager__item(href='#') 2
+					a.pager__item(href='#') 3
+					a.pager__item(href='#') 4
+					a.pager__item(href='#') ...
+					a.pager__item(href='#') 116
+
+				.info-block
+					.info-block__content
+						.info-block__title Новая
+						.info-block__text образовательная программа со скидкой
+						.info-block__sale -30%
+
+			

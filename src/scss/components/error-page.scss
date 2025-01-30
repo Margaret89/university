@@ -1,0 +1,95 @@
+/*-------------- error-page -----------------*/
+.error-page{
+	display: flex;
+	align-items: center;
+	gap: 30px;
+
+	&__main{
+		background: #fff;
+		border-right: 1px solid #D3D7EA;
+		padding: 60px 30px;
+		text-align: center;
+	}
+
+	&__title{
+		font-size: 3.5rem;
+		font-weight: 600;
+	}
+
+	&__subtitle{
+		font-size: 3rem;
+		font-weight: 600;
+		margin-top: 8px;
+	}
+
+	&__img{
+		max-width: 400px;
+		margin-left: auto;
+		margin-right: auto;
+		margin-top: 65px;
+	}
+
+	&__text{
+		font-size: 2.6rem;
+		line-height: 1.3;
+		margin-top: 65px;
+	}
+
+	&__desc{
+		margin-top: 63px;
+
+		h3, .h3{
+			font-weight: 500;
+			margin-bottom: 22px;
+		}
+	}
+
+	&__btn{margin-top: 30px;}
+}
+
+@media (max-width: 1279px) {
+	.error-page{
+		flex-direction: column;
+
+		&__main{
+			border-right: none;
+			border-bottom: 1px solid #D3D7EA;
+		}
+
+		&__desc{
+			margin-top: 0;
+			margin-bottom: 30px;
+		}
+	}
+}
+
+@media (max-width: 767px) {
+	.error-page{
+		&__main{padding: 17px 15px;}
+		&__title{font-size: 2.4rem;}
+
+		&__subtitle{
+			font-size: 1.8rem;
+			margin-top: 10px;
+		}
+	
+		&__img{margin-top: 50px;}
+	
+		&__text{
+			max-width: auto;
+			font-size: 1.8rem;
+			line-height: 1.44;
+			margin-top: 47px;
+		}
+	
+		&__desc{
+			margin-top: 22px;
+
+			h3, .h3{
+				font-size: 1.8rem;
+				line-height: 1.44;
+				margin-bottom: 8px;
+			}
+		}
+	}
+}

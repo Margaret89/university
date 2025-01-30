@@ -27,6 +27,13 @@ Fancybox.bind("[data-fancybox]", {
 	}
 });
 
+// Preloader
+if(document.querySelector('.js-preloader')){
+	window.setTimeout(function() {
+		document.querySelector('.js-preloader').classList.add('hide');
+	}, 1500);
+}
+
 //Choices
 import  Choices from 'choices.js/public/assets/scripts/choices.js';
 import 'choices.js/public/assets/styles/choices.min.css';
@@ -37,6 +44,7 @@ let screenWidth = window.screen.width;
 window.addEventListener('resize', () => {
 	screenWidth = window.screen.width;
 });
+
 
 document.addEventListener("DOMContentLoaded", function(){
 	// Маска для телефона
@@ -116,10 +124,20 @@ if(document.querySelector('.js-partners-slider')){
 }
 
 //Открыть/Закрыть попап с меню
-document.querySelector('.js-switch-header-popup').addEventListener('click', function(elem){
-	this.classList.toggle('active');
-	document.querySelector('.js-header-popup').classList.toggle('open');
-});
+if(document.querySelector('.js-switch-header-popup')){
+	document.querySelector('.js-switch-header-popup').addEventListener('click', function(elem){
+		this.classList.toggle('active');
+		document.querySelector('.js-header-popup').classList.toggle('open');
+	});
+}
+
+//Открыть попап с меню
+if(document.querySelector('.js-open-header-popup')){
+	document.querySelector('.js-open-header-popup').addEventListener('click', function(elem){
+		document.querySelector('.js-switch-header-popup').classList.toggle('active');
+		document.querySelector('.js-header-popup').classList.toggle('open');
+	});
+}
 
 // Раскрывающийся блок
 document.querySelectorAll('.js-unwrap-block').forEach((accSection) => {
@@ -144,8 +162,14 @@ document.querySelectorAll('.js-main-menu').forEach((accSection) => {
 		const accHeader = accSection.querySelector('.js-main-menu-title-wrap');
 		const accBody = accSection.querySelector('.js-main-menu-content');
 		const accContent = accSection.querySelector('.js-main-menu-sub');
+
+		
+
 		
 		accHeader.addEventListener('click', () => {
+			console.log('111 = ', );
+			console.log('accHeader = ', accHeader);
+		console.log('accBody = ', accBody);
 			accSection.classList.toggle("opened");
 			
 			if ( accSection.classList.contains("opened") ) {
@@ -158,23 +182,41 @@ document.querySelectorAll('.js-main-menu').forEach((accSection) => {
 });
 
 // Открыть/Закрыть фильтр
-document.querySelectorAll('.js-filter').forEach((accSection) => {
-	if(screenWidth < 1280){
-		const accHeader = accSection.querySelector('.js-filter-top');
-		const accBody = accSection.querySelector('.js-filter-content-wrap');
-		const accContent = accSection.querySelector('.js-filter-content');
-		
-		accHeader.addEventListener('click', () => {
-			accSection.classList.toggle("opened");
+if(document.querySelector('.js-filter')){
+	document.querySelectorAll('.js-filter').forEach((accSection) => {
+		if(screenWidth < 1280){
+			const accHeader = accSection.querySelector('.js-filter-top');
+			const accBody = accSection.querySelector('.js-filter-content-wrap');
+			const accContent = accSection.querySelector('.js-filter-content');
 			
-			if ( accSection.classList.contains("opened") ) {
-				accBody.style.maxHeight = `${accContent.clientHeight}px`;
-			} else {
-				accBody.style.maxHeight = "0px";
-			}
-		})
+			accHeader.addEventListener('click', () => {
+				accSection.classList.toggle("opened");
+				
+				if ( accSection.classList.contains("opened") ) {
+					accBody.style.maxHeight = `${accContent.clientHeight}px`;
+				} else {
+					accBody.style.maxHeight = "0px";
+				}
+			})
+		}
+	});
+}
+
+//
+
+const simulateClick = (selector) => {
+	const element = document.querySelector(selector);
+	if (element) { 
+		element.dispatchEvent(new MouseEvent('click', { bubbles: true }));
 	}
-});
+};
+
+if(document.querySelector('.js-filter-clear')){
+	document.querySelector('.js-filter-clear').addEventListener('click', function(elem){
+		simulateClick('.js-btn-filter-clear');
+	});
+}
+
 
 // Валидация форм
 

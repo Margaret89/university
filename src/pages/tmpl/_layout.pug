@@ -11,6 +11,10 @@ html(lang="ru")
 		else
 			title ALMA
 	body
+		.preloader.js-preloader(style="height: 100vh;width: 100%;display: flex;align-items: center;justify-content: center;background: #fff; position: fixed;top: 0;left: 0;z-index: 20000;")
+			.preloader__content
+				img(src="/img/preloader.gif", alt="")
+	
 		.wrapper
 			block sidebar
 			

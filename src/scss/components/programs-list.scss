@@ -35,6 +35,13 @@
 		.icon{color: var(--color-primary);}
 	}
 
+	&__tags{
+		display: flex;
+		flex-direction: column;
+		justify-content: flex-end;
+		gap: 10px;
+	}
+
 	&__tag{
 		display: inline-flex;
 		padding: 2px 5px;

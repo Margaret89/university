@@ -2,9 +2,11 @@
 @import "utils/fonts";
 @import "utils/reset";
 
+@import "components/preloader";
 
 @import "layouts/main";
 @import "layouts/header";
+
 
 @import "components/swiper";
 @import "components/choices";
@@ -37,3 +39,4 @@
 @import "components/reviews";
 @import "components/catalog-other";
 @import "components/partners-slider";
+@import "components/error-page";
